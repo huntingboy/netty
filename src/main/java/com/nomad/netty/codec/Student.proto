@@ -1,0 +1,9 @@
+syntax = "proto3"; //版本
+option optimize_for = SPEED; //加快解析
+option java_package = "com.nomad.netty.codec"; //那个包下
+option java_outer_classname = "StudentPOJO"; //外部类名，文件名，实际传输的是内部类
+
+message Student{ //实际传输的是内部类
+    int32 id = 1; //Student属性id， int32为protobuf类型(不同的语言对应不同的具体类型)，1为序号，不是属性值
+    string name = 2; //Student属性name， string为protobuf类型，2为序号，不是属性值
+}
